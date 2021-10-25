@@ -13,6 +13,7 @@ public class Cart {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public long cartID;
 	
 	public String orderId;    
