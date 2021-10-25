@@ -14,7 +14,27 @@ public class UserServiceIm implements UserService {
 	@Override
 	public User addUser(User user) {
 		// TODO Auto-generated method stub
+		
 		return userdao.save(user);
+	}
+
+	@Override
+	public User findUser() {
+		// TODO Auto-generated method stub
+		return userdao.findByEmailAddress();
+	}
+	
+
+	@Override
+	public User searchUser(User user) {
+		// TODO Auto-generated method stub
+		return userdao.searchUser(user.emailId,user.password1);
+	}
+
+	@Override
+	public User login(String emailid, String userpassword) {
+		// TODO Auto-generated method stub
+		return userdao.findByEmailIdAndPassword1(emailid, userpassword);
 	}
 
 }

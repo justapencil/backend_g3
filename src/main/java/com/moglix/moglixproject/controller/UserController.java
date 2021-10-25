@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.moglix.moglixproject.dto.User;
@@ -28,4 +29,10 @@ public class UserController {
 	{
 		return userservice.addUser(user);
 	}
+	
+	@GetMapping("/user/login")
+	public User login(@RequestParam("emailid") String emailid,@RequestParam ("userpassword")String userpassword) {
+		return this.userservice.login(emailid,userpassword);
+		}
+
 }
