@@ -30,6 +30,13 @@ public class UserController {
 		return userservice.addUser(user);
 	}
 	
+	@PostMapping("/admin/user/add")
+	public User addadminuser(@RequestBody User user)
+	{
+	return userservice.addadminuser(user);	
+	}
+	
+	
 	@GetMapping("/user/login")
 	public User login(@RequestParam("emailid") String emailid,@RequestParam ("userpassword")String userpassword) {
 		return this.userservice.login(emailid,userpassword);

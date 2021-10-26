@@ -23,6 +23,7 @@ public class User {
 	public String password1;
 	public String emailId;
 	
+	
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "roleId")
 	private Role role;

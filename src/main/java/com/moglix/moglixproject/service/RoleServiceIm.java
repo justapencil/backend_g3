@@ -1,5 +1,7 @@
 package com.moglix.moglixproject.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,12 @@ public class RoleServiceIm implements RoleService {
 	public Role addRole(Role role) {
 		// TODO Auto-generated method stub
 		return roleDao.save(role);
+	}
+
+	
+	public List<Role> listAll() {
+		// TODO Auto-generated method stub
+		return roleDao.findAll();
 	}
 
 }

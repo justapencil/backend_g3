@@ -13,6 +13,8 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long catId;
+	
+	
 	public String catName;
 	public long getCatId() {
 		return catId;

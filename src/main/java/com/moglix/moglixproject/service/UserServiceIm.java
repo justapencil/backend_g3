@@ -37,4 +37,10 @@ public class UserServiceIm implements UserService {
 		return userdao.findByEmailIdAndPassword1(emailid, userpassword);
 	}
 
+	@Override
+	public User addadminuser(User user) {
+		// TODO Auto-generated method stub
+		return userdao.save(user);
+	}
+
 }
