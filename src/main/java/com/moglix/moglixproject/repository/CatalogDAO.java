@@ -7,4 +7,5 @@ import com.moglix.moglixproject.dto.Catalog;
 @Repository
 public interface CatalogDAO extends JpaRepository<Catalog, Long>{
 
+	
 }

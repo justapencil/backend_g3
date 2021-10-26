@@ -17,11 +17,18 @@ public class Order {
 	
 	public String userId;     
 	public String  invid;     
-	public String productId;  
+	public String productId; 
+	public String status;
 	public int productQty; 
 	public double totalPrice;
 	public double grandtotalprice;
 	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public long getOrderId() {
 		return orderId;
 	}
